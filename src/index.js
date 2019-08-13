@@ -20,7 +20,7 @@ const route = (
     <Router>
         <Switch>
             <Route exact path='/' component={MaterialSignIn}/>
-            <Route path='/sign-up' component={MaterialSignUp}/>
+            <Route path='/signup' component={MaterialSignUp}/>
             <Route path="/profile" component={Profile}/>
             <Route path="/master" component={ProfileMaster}/>
             <Route path="/history" component={History}/>

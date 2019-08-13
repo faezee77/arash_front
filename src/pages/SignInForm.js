@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import '../App.css';
+import '../styles/MaterialSignIn.css';
+import {Redirect} from 'react-router-dom'
 
 class SignInForm extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class SignInForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     login(){
+        console.log("i am in login");
          const formData = new FormData();
          formData.set("username", this.state.username);
          formData.set("password", this.state.password);
@@ -58,7 +60,7 @@ class SignInForm extends Component {
 
     render() {
         if (this.state.isLoggedIn) {
-             return <Redirect to='./history' />
+            return <Redirect to='/profile'/>
         }
         return (
             <div className='App'>
